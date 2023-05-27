@@ -34,17 +34,13 @@
         .nav-responsive.nav{
             display: flex;
         } 
-   
     }
 
     @media screen and (max-width: 700px) {
         .input-group .autosearch-form{
             width: 150px;
-        }
-       
-        
+        }    
     }
-
 </style>
 
 <div class="navbar header" id="fixnav">

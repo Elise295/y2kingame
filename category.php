@@ -3,7 +3,7 @@ require_once __DIR__ . '/controllers/home.php';
 require_once __DIR__ . '/controllers/game.php';
 
 $mysqli = (new Database())->getConnectToQuery();
-if ($categoryId != null) {
+if($categoryId != null){
     $query = mysqli_query($mysqli, "SELECT * FROM tbl_category where category_id = $categoryId");
     $result = mysqli_fetch_assoc($query);
 }
@@ -15,15 +15,7 @@ if ($categoryId != null) {
 
 <head>
     <link rel="icon" href="resource/whiteshortlogo.png">
-    <title>
-        <?php if ($categoryId != null) {
-            echo $result['category_name'];
-        } else {
-            echo "All";
-        }
-        ;
-        echo " game" ?>
-    </title>
+    <title><?php if($categoryId != null){echo $result['category_name'];} else {echo "All";};echo " game" ?></title>
     <link rel="stylesheet" href="css/category.css">
     </link>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -54,64 +46,94 @@ if ($categoryId != null) {
                     <div class="label">
                         <label style="font-size: 32px; color: white; margin-bottom: 30px;">CATEGORY</label>
                     </div>
-                    <?php
-                    foreach ($categoryList as $item) {
-
-                        echo "<div class=\"form-check\">
-<input class=\"form-check-input\" type=\"checkbox\" value=\"\" id=\"flexCheckDefault\" ";
-                        if ($categoryId == $item->getCategoryID() . '') {
-                            echo 'checked';
-                        }
-                        echo ">
-<label class=\"form-check-label\" for=\"flexCheckDefault\">
-    ";
-                        echo $item->getCategoryName();
-                        echo "
-</label>
-</div>";
-
-                    }
-                    ?>
-
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Action
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Adventure
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Arcade
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Building
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Causual
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Adventure
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Fighting
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Indie
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            JRPG
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            RPG
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Puzzle
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Role-Playing
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            Simulation
+                        </label>
+                    </div>
                 </div>
                 <div class="row col-10" style="margin-left:-15px;margin-right:-15px;">
                     <div class="search-category" style="margin-left: 650px;">
                         <label style="margin: 15px 10px 0px 200px; color: white;">sort by:</label>
-                        <select class="sortby" onchange="sortOption()">
-                            <?php
-                            echo "<option value=\"sortDefault\"";
-                            if ($sort == 'sortDefault') {
-                                echo 'selected';
-                            }
-                            ;
-                            echo ">choose its condition</option>";
-                            echo "<option value=\"sortByDateReverse\"";
-                            if ($sort == 'sortByDateReverse') {
-                                echo 'selected';
-                            }
-                            ;
-                            echo ">from newest to oldest</option>";
-                            echo "<option value=\"sortByDate\"";
-                            if ($sort == 'sortByDate') {
-                                echo 'selected';
-                            }
-                            ;
-                            echo ">from oldest to newest</option>";
-                            echo "<option value=\"sortByPrice\"";
-                            if ($sort == 'sortByPrice') {
-                                echo 'selected';
-                            }
-                            ;
-                            echo ">from lowest to highest</option>";
-                            echo "<option value=\"sortByPriceReverse\"";
-                            if ($sort == 'sortByPriceReverse') {
-                                echo 'selected';
-                            }
-                            ;
-                            echo ">from highest to lowest</option>";
-                            ?>
-
-
+                        <select class="sortby">
+                            <option value="0">choose its condition</option>
+                            <option value="">from newest to oldest</option>
+                            <option value="">from oldest to newest</option>
+                            <option value="">from lowest to highest</option>
+                            <option value="">from highest to lowest</option>
                         </select>
                     </div>
                     <div class="main-game row col-12" style="margin-left:-15px;margin-right:-15px;">
@@ -120,33 +142,19 @@ if ($categoryId != null) {
                                 <div class="carousel-item active">
                                     <div class="cards-wrapper">
                                         <?php
-                                        foreach ($listGameByCategory as $item) {
+                                        foreach($listGameByCategory as $item){
                                             // ";echo $item->getName();echo" echo "<br>";
                                             echo "
                                                 <div class=\"card\" style=\"border-radius: 10px;background-color: #CBE4DE;\">
-                                                <img src=";
-                                            echo $item->getImgURL();
-                                            echo " class=\"card-img-top\" alt=\"...\">
+                                                <img src=";echo $item->getImgURL();echo" class=\"card-img-top\" alt=\"...\">
                                                 <div class=\"card-body\">
-                                                    <a href=\"detail.php?id=";
-                                            echo $item->getGameId();
-                                            echo "\">
-                                                        <h5 class=\"card-title\">";
-                                            echo $item->getName();
-                                            echo "</h5>
+                                                    <a href=\"detail.php?id=";echo $item->getGameId();echo"\">
+                                                        <h5 class=\"card-title\">";echo $item->getName();echo"</h5>
                                                     </a>
-                                                    <h6 class=\"card-price\">";
-                                            echo $item->getPriceFormat();
-                                            echo "</h6>
-                                                    <p class=\"card-text\">";
-                                            echo $item->getIntro();
-                                            echo "</p>
-                                                    <p class=\"card-date\">";
-                                            echo $item->getReleaseDateFormat();
-                                            echo "</p>
-                                                    <a id=\"add\" href=\"cart.php?gameId=";
-                                            echo $item->getGameId();
-                                            echo "\" class=\"btn btn-outline-dark\">
+                                                    <h6 class=\"card-price\">";echo $item->getPriceFormat();echo"</h6>
+                                                    <p class=\"card-text\">";echo $item->getIntro();echo"</p>
+                                                    <p class=\"card-date\">";echo $item->getReleaseDateFormat();echo"</p>
+                                                    <a id=\"add\" href=\"cart.php?gameId=";echo $item->getGameId();echo"\" class=\"btn btn-outline-dark\">
                                                         <i class=\" fa fa-shopping-cart\"></i>
                                                         ADD TO CART</a>
                                                     <a id=\"buy\" href=\"#\" class=\"btn btn-outline-dark\">Buy now</a>
@@ -155,7 +163,7 @@ if ($categoryId != null) {
                                             ";
                                         }
                                         ?>
-
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -175,19 +183,6 @@ if ($categoryId != null) {
         </div>
     </div>
     <?php require_once __DIR__ . '/components/footer.php'; ?>
-    <script>
-
-        function sortOption() {
-
-            var selectElement = event.target; // Lấy phần tử select đã thay đổi
-            var selectedOption = selectElement.value; // Lấy giá trị tùy chọn đã chọn
-            var linkTo = "category.php?" + selectedOption + "&state=" + "<?php echo $state ?>" + "&valueState=" + "<?php echo $valueState ?>" + "&categoryId=" + "<?php echo $categoryId ?>";
-            window.location.href = linkTo;
-
-
-            // Thực hiện các hành động khác tùy ý
-        }
-    </script>
 
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

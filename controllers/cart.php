@@ -46,13 +46,34 @@ if (isset($_COOKIE['user'])) {
                 $sumPrice += $item->getPrice();
             }
             $sumPriceFormat = number_format($sumPrice) . 'đ';
-
+            // foreach ($listGameByAcc as $item) {
+            //     echo $item->getGameId();
+            //     echo "<br>";
+            //     echo $item->getCategoryId();
+            //     echo "<br>";
+            //     echo $item->getName();
+            //     echo "<br>";
+            //     echo $item->getIntro();
+            //     echo "<br>";
+            //     echo $item->getPriceFormat();
+            //     echo "<br>";
+            //     echo $item->getDetail();
+            //     echo "<br>";
+            //     echo $item->getConfiguration();
+            //     echo "<br>";
+            //     echo $item->getDeveloper();
+            //     echo "<br>";
+            //     echo $item->getReleaseDateFormat();
+            //     echo "<br>";
+            //     echo $item->getImgURL();
+            //     echo "<br>";
+            //     echo "<br>";
+            // }
             $status = 'ok';
         }
     } else {
         //trường hợp vào giỏ hàng
         $gameUnit = new GameUnit();
-        $listGameByAcc = $gameUnit->getListGameByAccID($userID);
         $listGameByAcc = $gameUnit->getListGameByAccID($userID);
         $sumItem = 0;
             $sumPrice = 0;
@@ -61,7 +82,29 @@ if (isset($_COOKIE['user'])) {
                 $sumPrice += $item->getPrice();
             }
             $sumPriceFormat = number_format($sumPrice) . 'đ';
-
+        // foreach ($listGameByAcc as $item) {
+        //     echo $item->getGameId();
+        //     echo "<br>";
+        //     echo $item->getCategoryId();
+        //     echo "<br>";
+        //     echo $item->getName();
+        //     echo "<br>";
+        //     echo $item->getIntro();
+        //     echo "<br>";
+        //     echo $item->getPriceFormat();
+        //     echo "<br>";
+        //     echo $item->getDetail();
+        //     echo "<br>";
+        //     echo $item->getConfiguration();
+        //     echo "<br>";
+        //     echo $item->getDeveloper();
+        //     echo "<br>";
+        //     echo $item->getReleaseDateFormat();
+        //     echo "<br>";
+        //     echo $item->getImgURL();
+        //     echo "<br>";
+        //     echo "<br>";
+        // }
         $status = 'ok';
     }
 

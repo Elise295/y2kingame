@@ -1,8 +1,10 @@
 <?php
   require_once __DIR__ . '/controllers/home.php';
+  
   $mysqli = (new Database())->getConnectToQuery();
 
   $result = mysqli_query($mysqli, "SELECT * FROM tbl_game limit 3");
+  
 
   $flag = 0;
   $flag_1 = 0;
@@ -195,15 +197,12 @@
                     <?php
                       $query_lasted_game = mysqli_query($mysqli, "SELECT * from tbl_game  where game_price=0 ORDER BY game_releasedate DESC limit 3,3 ");
                       while($lasted_game = mysqli_fetch_assoc($query_lasted_game)){
-                        
-
                         echo <<<HTML
                           <div class="card" style="border-radius: 10px;background-color: #CBE4DE;">
                             <img src="{$lasted_game['image_url']}" class="card-img-top" alt="...">
                             <div class="card-body">
                               <a href="detail.php?id={$lasted_game['game_id']}">
                               <h5 class="card-title">{$lasted_game['game_name']}</h5>
-
                               </a>
                               <h6 class="card-price">Free</h6>
                               <p class="card-text">{$lasted_game['game_intro']}</p>

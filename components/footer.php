@@ -74,10 +74,10 @@
                           <a href="https://twitter.com/home?lang=en" target="_blank">Docs</a>
                       </li>
                       <li>
-                          <a href="http://127.0.0.1:5500/termsofservice.html" target="_blank">Terms of service</a>
+                          <a href="termsofservice.php" target="_blank">Terms of service</a>
                       </li>
                       <li>
-                          <a href="http://127.0.0.1:5500/privacypolicy.html" target="_blank">Privacy policy</a>
+                          <a href="privacypolicy.php" target="_blank">Privacy policy</a>
                       </li>
                   </ul>
 
@@ -145,7 +145,7 @@
                       </div>
                       <p class="small text" style="font-size: 10px;">
                         You can unsubscribe via the newsletter at any time. By subscribing to our newsletter you agree to our
-                        <a href="http://127.0.0.1:5500/privacypolicy.html" target="_blank" 
+                        <a href="privacypolicy.php" target="_blank" 
                         rel="noopener noreferrer">Privacy Policy</a>.
                       </p>
                     </form>
