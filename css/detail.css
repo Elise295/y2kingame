@@ -1,0 +1,173 @@
+@font-face {
+    font-family: retron2000;
+    src: url(../fonts/fonts/Retron2000.otf) format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: ahamono;
+    src: url(../fonts/TUV-Ahamono/TUV-Ahamono.otf);
+    font-style: normal;
+}
+
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: retron2000;
+}
+.navbar {
+    box-shadow: 1px 2px 3px rgba(132, 132, 132, 0.854);
+    padding:10px;
+    left: 0;
+    position: relative;
+    right: 0;
+    top: 0;
+    transition: transform .2s linear;
+    background-color: #2E4F4F;
+}
+.left .nav-link{
+    color: white;
+    margin-top: 5px;
+}
+.right .nav-link{
+    color: white;
+    margin-bottom: 10px;
+}
+h2{
+    color: aliceblue;
+    padding-left: 0px;
+}
+#logo{
+    margin: 0px 10px 0px 10px;
+}
+.breadcrumb{
+    background-image: url(../resource/background.png);
+}
+.breadcrumb li{
+    padding-left: 185px;
+}
+.breadcrumb-item a{
+    color: white;
+}
+.breadcrumb {
+    background-color: #2E4F4F;
+}
+#content{
+    background-image: url(../resource/background.png);
+    padding-bottom: 80px;
+}
+body {
+    text-align: center;
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: ">";
+    }
+}
+.name-game-rating{
+    padding-top: 40px;
+}
+.ratings i{
+    float: left;
+}
+.ratings {
+    padding-top: 10px !important;
+}
+.rating-color{
+    color:#0E8388 !important;
+    font-size: 24px;
+}
+.rating-uncolor{
+    color: #CBE4DE;
+    font-size: 24px;
+}
+.detail-game{
+    color: #CBE4DE;
+    width: 70%;
+    margin-top: 10px;
+    justify-content: center;
+    font-family: ahamono;
+    font-size: 13px;
+}
+
+.info-buy{
+    color:white;
+}
+.box-buy{
+    /* margin-left: 200px; */
+    border-radius: 20px;
+    border-width: 5px;
+    border-style:dashed;
+    background-color: #2E4F4F;
+}
+h2:hover{
+    color: #0E8388; /* màu chữ thay đổi khi hover */
+    transition: color 0.3s ease-in-out;
+}
+h5:hover{
+    color: black; /* màu chữ thay đổi khi hover */
+    transition: color 0.3s ease-in-out;
+}
+label:hover{
+    color: #2E4F4F;
+    transition: color 0.3s ease-in-out;
+}
+p:hover{
+    color: #2E4F4F;
+    transition: color 0.3s ease-in-out;
+}
+#logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out; 
+}
+.btn:hover::before {
+    transform: translate(200%, 200%);
+}
+/* Thay đổi màu nền của menu khi rê chuột */
+.nav-item:hover a {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.nav-item:hover {
+    background-color:#CBE4DE;
+}
+  
+  /* Thay đổi màu chữ của menu khi rê chuột */
+.nav-item:hover a {
+    color: #2E4F4F;
+}
+  /* Hiển thị menu con của dropdown khi rê chuột vào */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+  
+  /* Thay đổi màu nền của dropdown khi rê chuột */
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+  
+  /* Thay đổi màu chữ của dropdown khi rê chuột */
+.dropdown-item:hover a {
+    color: #2E4F4F;
+  }
+.row.main{
+    margin-left: 200px;
+}
+.row.name-game-rating{
+    margin-left: 230px;
+}
+.row.box-buy{
+    margin: 0px 30px 0 200px;
+}
+@media screen and (max-width: 1000px) {
+    .breadcrumb li{
+        padding-left: 10px;
+    }
+    .row.main{
+        margin-left: 10px;
+    }
+    .row.name-game-rating{
+        margin-left: 10px;
+    }
+    .row.box-buy{
+        margin-left: 10px;
+    }
+}
