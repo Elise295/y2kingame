@@ -74,10 +74,10 @@
                           <a href="https://twitter.com/home?lang=en" target="_blank">Docs</a>
                       </li>
                       <li>
-                          <a href="http://127.0.0.1:5500/termsofservice.html" target="_blank">Terms of service</a>
+                          <a href="termsofservice.php" target="_blank">Terms of service</a>
                       </li>
                       <li>
-                          <a href="http://127.0.0.1:5500/privacypolicy.html" target="_blank">Privacy policy</a>
+                          <a href="privacypolicy.php" target="_blank">Privacy policy</a>
                       </li>
                   </ul>
 
