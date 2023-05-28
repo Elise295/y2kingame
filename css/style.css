@@ -1,0 +1,282 @@
+/* @font-face {
+    font-family: "SVN-Retron2000";
+    src: url("D:/2023 Spring/Web/Final_Project/1. FONT/HEADING - RETRON 2000.zip/SVN-Retron 2000");
+}
+
+@font-face {
+    font-family: "TUV-Ahamono";
+    src: url("D:/2023 Spring/Web/Final_Project/1. FONT/BODY - AHAMONO.zip/TUV-Ahamono");
+} */
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;300;600;800&family=Source+Serif+Pro:ital,wght@0,300;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap');
+
+
+.container-fluid {
+    width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Martian Mono", monospace !important;
+}
+header {
+    height: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #2E4F4F;
+    color: #fff;
+    /* text-align: center; */
+    font-family: "Martian Mono", monospace;
+}
+
+#logo {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 10p;
+    bottom: 0;
+    left: 15px;
+    margin: 0;
+  }
+
+  .button-a {
+    background-color: #FF5722;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+
+  
+
+.bg-image {
+    background-image: url("../resource/screenbackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+
+img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+form {
+    margin: 0px;
+    text-align: left;
+    width: 80%;
+    padding: 15px;
+}
+
+#form_infor {
+    padding: 0px;
+  }
+
+#form_infor * {
+    text-align: left;
+    /* padding-left: 20px; */
+}
+
+h1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 72px;
+    color: white;
+}
+
+h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 64px; 
+}
+
+h3 {
+    font-size: 58px; 
+}
+
+p {
+    font-size: 13px;
+}
+
+
+input[type="text"], input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e6e6e6;
+}
+
+input[type="submit"] {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #444;
+}
+
+/* Login slider */
+.carousel-item {
+    height: 400px;
+    background-color: #f5f5f5;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Home */ 
+
+.navbar {
+    position: fixed;
+    background-color: #2E4F4F;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding-top: 0px ;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff; /* Thiết lập màu chữ cho các button */
+    font-weight: bold; /* Thiết lập độ đậm cho font chữ */
+    background-color: transparent; /* Xóa màu nền của các button */
+    border: none; /* Xóa đường viền của các button */
+    padding: 0.5rem 1rem; /* Thiết lập khoảng cách xung quanh của các button */
+    margin: 0 0.25rem; /* Thiết lập khoảng cách giữa các button */
+    border-radius: 0; /* Xóa góc bo tròn của các button */
+    transition: all 0.2s ease-in-out; /* Thiết lập hiệu ứng chuyển động cho các button */
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.2); /* Thiết lập màu nền khi hover hoặc focus */
+    border: none; /* Xóa đường viền khi hover hoặc focus */
+    outline: none; /* Xóa đường viền mặc định khi focus */
+  }
+
+/* Account user */
+#acc_avatar 
+  {
+    position: fixed;
+    top: 10px;
+    right: 2px;
+    width: 40px;
+    height: 40px;
+  }
+
+.dropdown-menu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+  }
+
+.dropdown-item {
+    padding: 5px 2px 5px 2px;
+}
+/* định dạng thanh search */
+
+  /* định dạng khi search bar được focus */
+  #search_form:focus {
+    outline: none; /* bỏ đường viền khi focus */
+    box-shadow: 0 0 5px #002a1f; /* đổ bóng */
+  }
+  
+  
+  /* Restyle Bootstrap root */
+
+  .btn-primary {
+    background-color: #0E8388 !important;
+    /* width: 92px !important;
+    height: 43px !important; */
+}
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary:active {
+    background-color: #021a1b !important;
+    border-color: #021a1b !important;
+  }
+
+  .btn-secondary {
+    background-color: rgba(255, 0, 0, 0) !important;
+    border-color:  rgba(255, 0, 0, 0) !important;
+}
+  .btn-secondary:hover,
+  .btn-secondary:focus,
+  .btn-secondary:active {
+    background-color: #000000 !important;
+    border-color: #ffffff !important;
+  }
+
+  .btn-infor {
+    color: #021a1b !important;
+    background-color: rgba(255, 0, 0, 0) !important;
+    border-color:  rgba(255, 0, 0, 0) !important;
+}
+  .btn-secondary:hover,
+  .btn-secondary:focus,
+  .btn-secondary:active {
+    background-color: #000000 !important;
+    border-color: #ffffff !important;
+  }
+/* 
+  .btn-icon {
+    padding: 0;
+    color: white;
+  }
+  
+  .btn-icon i {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+   */
+
+   .custom-card {
+    width: 400px;
+    height: 500px;
+    background-color: #CBE4DE !important;
+    border: 2px dashed #0E8388;
+    border-radius: 6px;
+  }
+
+  .custom-card .badge {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #ffffff !important;
+    border-radius: 4px !important;
+    color: #000000 !important;
+  }
+
+  .card-text {
+    max-height: 100px;
+    overflow: hidden;
+  }

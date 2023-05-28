@@ -1,0 +1,320 @@
+@font-face {
+    font-family: retron2000;
+    src: url(../fonts/fonts/Retron2000.otf) format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: ahamono;
+    src: url(../fonts/TUV-Ahamono/TUV-Ahamono.otf);
+    font-style: normal;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: retron2000;
+}
+.navbar {
+    box-shadow: 1px 2px 3px rgba(132, 132, 132, 0.854);
+    /* height: 70px; */
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: transform .2s linear;
+    background-color: #2E4F4F;
+}
+.left .nav-link{
+    color: white;
+    margin-top: 5px;
+}
+.right .nav-link{
+    color: white;
+    margin-bottom: 10px;
+}
+h2{
+    color: aliceblue;
+    padding-left: 0px;
+}
+#logo{
+    margin: 0px 10px 0px 10px;
+}
+.content{
+    background-image: url(../resource/background.png);
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+.breadcrumb{
+    background-image: url(../resource/background.png);
+}
+.breadcrumb li{
+    float: left;
+    padding-left: 200px;
+}
+.breadcrumb-item a{
+    color: white;
+}
+.breadcrumb {
+    background-color: #2E4F4F;
+}
+.column-view{
+    height: 100vh;
+}
+body {
+    text-align: center;
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: ">";
+    }
+}
+.form-check-label{
+    font-family: ahamono;
+    color: white;
+    font-size: 18px;
+}
+.form-check{
+    margin: 10px 10px 10px 20px;
+}
+.search-category{
+    /* background-color: #CBE4DE; */
+    height: 60px;
+    border-radius: 5px;
+}
+input[type="checkbox"]:disabled {
+    opacity: 1; /* Đảm bảo chữ vẫn sáng */
+    cursor: not-allowed; /* Thay đổi kiểu con trỏ khi di chuột vào ô checkbox */
+  }
+#shortsearch{
+    width: 400px;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 10px;
+    border-color: black;
+}
+.shortlogo{
+    margin-left: 10px;
+    margin-right: 40px;
+}
+#servicemenu li{
+    line-height: 55px;
+    font-size: 11px;
+    margin: 5px 10px;
+    color: rgb(63, 63, 63);
+}
+.btn-search{
+    height: 40px;
+    margin-top: 10px;
+    background-color: #2E4F4F;
+    margin-right: 10px;
+    align-content: center;
+}
+.bydate{
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+    align-content: center;
+    border-radius: 5px;
+    border-color: black;
+    color: grey;
+}
+.byprice{
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 10px;
+    align-content: center;
+    border-radius: 5px;
+    border-color: black;
+    color: grey;
+}
+.searchbar-content{
+    margin-bottom: 80px;
+}
+.main-game{
+    margin-top: 40px;
+}
+.cards-wrapper {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+  }
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 0px; 
+}
+.card {
+    margin: 0 1em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    width: 358.4px;
+    margin-bottom: 40px;
+}
+h5.card-title{
+    font-weight: bolder;
+    color: black;
+}
+.card-body{
+    background-color: #CBE4DE;
+    border-radius: 10px;
+}
+.card-body a{
+    background-color: #0E8388;
+    border-color: #0E8388;
+    color: aliceblue;
+    border-radius: 8px;
+}
+#add{
+    background-color: #CBE4DE;
+    border-color: #CBE4DE;
+    color: #2E4F4F;
+    font-family: ahamono;
+}
+#buy{
+    margin-left: 30px;
+    padding-bottom: 15px;
+}
+h2:hover{
+    color: black; /* màu chữ thay đổi khi hover */
+    transition: color 0.3s ease-in-out;
+}
+.card-title:hover{
+    color: #0E8388; /* màu chữ thay đổi khi hover */
+    transition: color 0.3s ease-in-out;
+}
+.card-price{
+    font-size: 17px;
+    font-family: ahamono;
+}
+.card-text{
+    font-size: 14px;
+    font-family: ahamono;
+}
+.card-date{
+    font-size: 13px;
+    font-style: oblique;
+    font-family: ahamono;
+}
+.carousel-inner {
+    padding: 1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.carousel-caption a{
+    color: aliceblue;
+}
+  
+.carousel-item button {
+    position: absolute;
+  }
+#demo{
+    width: 100vw;
+    align-items: center;
+    background-position-x: center;
+}
+@media (min-width: 768px) {
+    .card img {
+        height: 15em;
+        border-radius: 10px;
+}
+}
+.btn {
+    background-color: #1c6371;
+    color: #949494;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+  
+.btn::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: transform 0.5s ease;
+}
+#logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out; 
+}
+.btn:hover::before {
+    transform: translate(200%, 200%);
+}
+/* Thay đổi màu nền của menu khi rê chuột */
+.nav-item:hover a {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.nav-item:hover {
+    background-color:#CBE4DE;
+  }
+  
+  /* Thay đổi màu chữ của menu khi rê chuột */
+.nav-item:hover a {
+    color: #373a3c;
+}
+.form-check-label:hover{
+    color: #2E4F4F;
+}
+  /* Hiển thị menu con của dropdown khi rê chuột vào */
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+.card{
+  -webkit-transition: 0.3s transform ease-out;
+  transition: 0.3s transform ease-out;
+}
+.card:hover, .card:focus, .card-active{
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+}
+  /* Thay đổi màu nền của dropdown khi rê chuột */
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+  
+  /* Thay đổi màu chữ của dropdown khi rê chuột */
+.dropdown-item:hover a {
+    color: #373a3c;
+}
+.page-item a{
+    color: #2E4F4F;
+}
+ 
+/* #servicemenu a {
+    color: aliceblue;
+}
+
+#servicemenu{
+    margin-left: 220px;
+}
+
+#socialmenu li{
+    line-height: 55px;
+    font-size: 14px;
+    margin: 5px 10px;
+}
+
+#socialmenu{
+    margin-left: 340px;
+}
+
+.footer-mid{
+    margin: 20px 50px 20px 220px;
+}
+
+.footer .footer-top .footer-links-container .footer-links {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.footer-links h2{
+    font-weight: bold;
+}
+.footer-links a{
+    color: black;
+    font-size: 13px;
+} */
