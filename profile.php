@@ -28,7 +28,7 @@
     <style>
         .content{
             margin: 0px;
-            padding: 30px;
+            padding: 120px;
             text-align:center;
             color:white;
         }
