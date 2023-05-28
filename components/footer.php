@@ -114,7 +114,7 @@
                     </h2>
                     <a href="http://127.0.0.1:5500/?snr=1_4_4___12" target="_blank">Game Details</a>
                     </br>
-                    <a href="http://127.0.0.1:5500/?snr=1_4_4___12" target="_blank">All Games</a>
+                    <a href="category.php" target="_blank">All Games</a>
                     </br>
                     <a href="http://127.0.0.1:5500/?snr=1_4_4___12" target="_blank">Books</a>
                     </br>
@@ -145,7 +145,7 @@
                       </div>
                       <p class="small text" style="font-size: 10px;">
                         You can unsubscribe via the newsletter at any time. By subscribing to our newsletter you agree to our
-                        <a href="http://127.0.0.1:5500/privacypolicy.html" target="_blank" 
+                        <a href="privacypolicy.php" target="_blank" 
                         rel="noopener noreferrer">Privacy Policy</a>.
                       </p>
                     </form>
